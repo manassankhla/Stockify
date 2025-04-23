@@ -15,7 +15,7 @@ const News: React.FC = () => {
   const fetchNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=10&apiKey=8111765fa8004d0f98e1589de0ff2e46`
+        `https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=10&apiKey=NEWS_API_KEY`
       );
       const shuffled = response.data.articles.sort(() => 0.5 - Math.random());
       setArticles(shuffled.slice(0, 4));
